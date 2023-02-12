@@ -4,22 +4,30 @@ import { motion } from "framer-motion";
 
 import "./services.css";
 
+import serviceData from "../assets/data/serviceData";
+
 const Services = () => {
   return (
     <section className="services">
       <Container>
         <Row>
-          <Col lg="3" md="4">
-            <div className="service__item">
-              <span>
-                <i class="ri-truck-line"></i>
-              </span>
-              <div>
-                <h3>Free Shipping</h3>
-                <p>Lorem ipsum dolor sit amet.</p>
-              </div>
-            </div>
-          </Col>
+          {serviceData.map((item, index) => (
+            <Col lg="3" md="4" key={index}>
+              <motion.div
+                whileHover={{ scale: 1.1 }}
+                className="service__item"
+                style={{ background: `${item.bg}` }}
+              >
+                <span>
+                  <i class={item.icon}></i>
+                </span>
+                <div>
+                  <h3>{item.title}</h3>
+                  <p>{item.subtitle}</p>
+                </div>
+              </motion.div>
+            </Col>
+          ))}
         </Row>
       </Container>
     </section>
