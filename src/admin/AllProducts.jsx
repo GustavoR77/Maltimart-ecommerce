@@ -8,6 +8,8 @@ import { toast } from "react-toastify";
 const AllProducts = () => {
   const { data: productsData, loading } = useGetData("products");
 
+  //https://youtu.be/s8sp3KhBrGI?t=4884
+
   const deleteProduct = async (id) => {
     await deleteDoc(doc(db, "products", id));
     toast.success("Deleted!");
@@ -58,6 +60,7 @@ const AllProducts = () => {
           </Col>
         </Row>
       </Container>
+      
     </section>
   );
 };
