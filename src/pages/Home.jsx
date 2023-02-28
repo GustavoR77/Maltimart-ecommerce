@@ -64,23 +64,25 @@ const Home = () => {
           <Row>
             <Col lg="6" md="6">
               <div className="hero__content">
-                <p className="hero__subtitle">Trending product in {year}</p>
-                <h2>Que tal aquecer a piscina para mais diversão da criançada?</h2>
+                <p className="hero__subtitle">Produto em alta {year}</p>
+                <h2>Por que devo automatizar meu aquecedor solar?</h2>
                 <p>
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Suscipit neque, eos nisi officia nostrum esse, assumenda
-                  voluptatem ducimus temporibus autem consequuntur nihil dolore
-                  inventore ab facere ea ullam at?
+                  O aquecedor de água com energia solar é a
+                  melhor maneira de economizar energia elétrica (e dinheiro) e
+                  ainda assim ter a água sempre quente no chuveiro ou torneira,
+                  pois o processo de aquecimento ocorre por meio do calor do
+                  Sol, que é uma fonte de energia gratuita e que não prejudica o
+                  meio ambiente. 
                 </p>
                 <motion.button whileTap={{ scale: 1.2 }} className="buy__btn">
-                  <Link to="/shop">SHOP NOW</Link>
+                  <Link to="/shop">COMPRAR AGORA</Link>
                 </motion.button>
               </div>
             </Col>
 
             <Col lg="5" md="6">
               <div className="hero__img">
-                <img src={heroImg} alt=""/>
+                <img src={heroImg} alt="" />
               </div>
             </Col>
           </Row>
