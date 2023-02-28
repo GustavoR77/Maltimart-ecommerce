@@ -7,7 +7,7 @@ import Helmet from "../components/Helmet/Helmet";
 import "../styles/home.css";
 
 import { Container, Row, Col } from "reactstrap";
-import heroImg from "../assets/images/hero-img.png";
+import heroImg from "../assets/images/ribeiro/boiler-1.png";
 
 import Services from "../services/Services";
 import ProductsList from "../components/UI/ProductsList";
@@ -65,7 +65,7 @@ const Home = () => {
             <Col lg="6" md="6">
               <div className="hero__content">
                 <p className="hero__subtitle">Trending product in {year}</p>
-                <h2>Make Your Interior More Minimalistic & Modern</h2>
+                <h2>Que tal aquecer a piscina para mais diversão da criançada?</h2>
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                   Suscipit neque, vero, eos nisi officia nostrum esse, assumenda
@@ -78,9 +78,9 @@ const Home = () => {
               </div>
             </Col>
 
-            <Col lg="6" md="6">
+            <Col lg="5" md="6">
               <div className="hero__img">
-                <img src={heroImg} alt="" />
+                <img src={heroImg} alt=""/>
               </div>
             </Col>
           </Row>
