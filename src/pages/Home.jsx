@@ -68,7 +68,7 @@ const Home = () => {
                 <h2>Que tal aquecer a piscina para mais diversão da criançada?</h2>
                 <p>
                   Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                  Suscipit neque, vero, eos nisi officia nostrum esse, assumenda
+                  Suscipit neque, eos nisi officia nostrum esse, assumenda
                   voluptatem ducimus temporibus autem consequuntur nihil dolore
                   inventore ab facere ea ullam at?
                 </p>
