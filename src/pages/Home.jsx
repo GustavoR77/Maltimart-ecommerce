@@ -25,17 +25,18 @@ const Home = () => {
   const [bestSalesProducts, setBestSalesProducts] = useState([]);
   const [mobileProducts, setMobileProducts] = useState([]);
   const [wirelessProducts, setWirelessProducts] = useState([]);
+  const [boilerProducts, setBoilerProducts] = useState([]);
   const [popularProducts, setPopularProducts] = useState([]);
 
   const year = new Date().getFullYear();
 
   useEffect(() => {
     const filteredTrendingProducts = products.filter(
-      (item) => item.category === "chair"
+      (item) => item.category === "boiler"
     );
 
     const filteredBestSalesProducts = products.filter(
-      (item) => item.category === "sofa"
+      (item) => item.category === "boiler"
     );
 
     const filteredMobileProducts = products.filter(
@@ -43,7 +44,11 @@ const Home = () => {
     );
 
     const filteredWirelessProducts = products.filter(
-      (item) => item.category === "wireless"
+      (item) => item.category === "boiler"
+    );
+
+    const filteredBoilerProducts = products.filter(
+      (item) => item.category === "boiler"
     );
 
     const filterePopularProducts = products.filter(
@@ -54,6 +59,7 @@ const Home = () => {
     setBestSalesProducts(filteredBestSalesProducts);
     setMobileProducts(filteredMobileProducts);
     setWirelessProducts(filteredWirelessProducts);
+    setBoilerProducts(filteredBoilerProducts);
     setPopularProducts(filterePopularProducts);
   }, [products]);
 
@@ -64,19 +70,22 @@ const Home = () => {
           <Row>
             <Col lg="6" md="6">
               <div className="hero__content">
-                <p className="hero__subtitle">Produto em alta {year}</p>
+                <p className="hero__subtitle mobile__center">
+                  Produto em alta {year}
+                </p>
                 <h2>Por que devo automatizar meu aquecedor solar?</h2>
                 <p>
-                  O aquecedor de água com energia solar é a
-                  melhor maneira de economizar energia elétrica (e dinheiro) e
-                  ainda assim ter a água sempre quente no chuveiro ou torneira,
-                  pois o processo de aquecimento ocorre por meio do calor do
-                  Sol, que é uma fonte de energia gratuita e que não prejudica o
-                  meio ambiente. 
+                  O aquecedor de água com energia solar é a melhor maneira de
+                  economizar energia elétrica (e dinheiro) e ainda assim ter a
+                  água sempre quente no chuveiro ou torneira, pois o processo de
+                  aquecimento ocorre por meio do calor do Sol, que é uma fonte
+                  de energia gratuita e que não prejudica o meio ambiente.
                 </p>
-                <motion.button whileTap={{ scale: 1.2 }} className="buy__btn">
-                  <Link to="/shop">COMPRAR AGORA</Link>
-                </motion.button>
+                <div className=" mobile__center">
+                  <motion.button whileTap={{ scale: 1.2 }} className="buy__btn">
+                    <Link to="/shop">COMPRAR AGORA</Link>
+                  </motion.button>
+                </div>
               </div>
             </Col>
 
@@ -93,10 +102,10 @@ const Home = () => {
         <Container>
           <Row>
             <Col lg="12" className="text-center">
-              <h2 className="section__title">Trending Products</h2>
+              <h2 className="section__title">Produtos em Alta</h2>
             </Col>
             {loading ? (
-              <h5 className="fw-bold">Loading.....</h5>
+              <h5 className="fw-bold">Carregando.....</h5>
             ) : (
               <ProductsList data={trendingProducts} />
             )}
@@ -104,20 +113,20 @@ const Home = () => {
         </Container>
       </section>
 
-      <section className="best__sales">
+      {/* <section className="best__sales">
         <Container>
           <Row>
             <Col lg="12" className="text-center">
-              <h2 className="section__title">Best Sales</h2>
+              <h2 className="section__title">Mais Vendidos</h2>
             </Col>
             {loading ? (
-              <h5 className="fw-bold">Loading.....</h5>
+              <h5 className="fw-bold">.....</h5>
             ) : (
               <ProductsList data={bestSalesProducts} />
             )}
           </Row>
         </Container>
-      </section>
+            </section> */}
       <section className="timer__count">
         <Container>
           <Row>

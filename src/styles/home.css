@@ -105,6 +105,10 @@
     .section__title {
         font-size: 1.4rem;
     }
+
+    .mobile__center {
+        text-align: center;
+    }
 }
 
 @media only screen and (max-width:576px) {

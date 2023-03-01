@@ -122,7 +122,7 @@ const AddProducts = () => {
                         <option value="sofa">Sofa</option>
                         <option value="mobile">Mobile</option>
                         <option value="watch">Watch</option>
-                        <option value="wireless">Wireless</option>
+                        <option value="boiler">Boiler</option>
                       </select>
                     </FormGroup>
                   </div>

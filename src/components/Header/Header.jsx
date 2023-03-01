@@ -88,7 +88,7 @@ const Header = () => {
               <img src={logo} alt="logo" />
               <div>
                 <h1>Ribeiro</h1>
-                <h5>Aquecedores Solar</h5>
+                <h6>Aquecedores Solar</h6>
               </div>
             </div>
 
